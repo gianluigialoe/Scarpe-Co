@@ -1,0 +1,8 @@
+﻿@model Scarpe
+
+<h2>Sei sicuro di voler eliminare il pesce @(Model.Name)?</h2>
+
+<form asp-controller="Scarpe" asp-action="DeletePost" method="post">
+    <input type="hidden" asp-for="@Model.ScarpeId" />
+    <button type="submit">Elimina</button>
+</form>

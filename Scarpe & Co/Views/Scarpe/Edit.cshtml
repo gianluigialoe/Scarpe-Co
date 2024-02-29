@@ -1,0 +1,36 @@
+﻿@model Scarpe
+
+<form asp-controller="Scarpe" asp-action="Edit" method="post" class="mt-4">
+    <input type="hidden" asp-for="@Model.ScarpeId" /><br />
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome:</label>
+        <input type="text" class="form-control" asp-for="@Model.Name" name="Name" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Prezzo:</label>
+        <input type="number" class="form-control" asp-for="@Model.Price" name="Price" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Descrizione:</label>
+        <textarea class="form-control" asp-for="@Model.Descrizione" name="Descrizione" required></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="coverImage" class="form-label">Immagine di Copertina:</label>
+        <input type="text" asp-for="@Model.ImmagineDiCopertina" class="form-control" name="ImmagineDiCopertina" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="image1" class="form-label">Immagine 1:</label>
+        <input type="text" asp-for="@Model.Immagine1" class="form-control" name="Immagine1" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="image2" class="form-label">Immagine 2:</label>
+        <input type="text" asp-for="@Model.Immagine2" class="form-control" name="Immagine2" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Modific Scarpe</button>
+</form>
